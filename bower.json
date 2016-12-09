@@ -1,0 +1,22 @@
+{
+  "name": "zkblog",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Momo1230 <1070264799@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Momo1230/myzkblog",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

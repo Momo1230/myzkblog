@@ -1,0 +1,42 @@
+
+<%- include  commn/header.html%>
+
+<h1><%= title %></h1>
+
+
+<%
+articles.forEach(function(art){
+
+%>
+<div class="media">
+    <a class="media-left" href="#">
+        <img src="<%=art.user.avatar%>" alt="">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="/article/detail/<%=art._id%>"><%=art.title%></a></h4>
+        <%-art.content%>
+    </div>
+    阅读：<%= art.pv %>|评论：<%= art.comments.length%>
+</div>
+
+<%
+});
+%>
+
+<nav>
+<ul class="pagination">
+
+    <%
+    for(var i=1;i<=totalPage;i++){
+    %>
+
+    <li><a href="/article/list/<%=i%>/<%=pageSize%>?keyword=<%=keyword%>"><%=i%></a></li>
+    <%
+    }
+    %>
+
+</ul>
+</nav>
+</body>
+
+<%- include  commn/footer.html%>
